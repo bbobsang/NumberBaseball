@@ -10,7 +10,7 @@ public class ScoreCalculator4{
     // 입력 유효성 검사
     public boolean isValidInput(String input) {
         if (input.length() != targetNumbers.length) return false; // 3자리 수 검사
-        if (!input.matches("\\d{" + targetNumbers.length + "}")) return false; // 숫자만 포함되는지 검사
+        if (!input.matches("[1-9]{" + targetNumbers.length + "}")) return false; // 1~9 숫자만 포함되는지 검사
         return input.chars().distinct().count() == targetNumbers.length;
     }
 
